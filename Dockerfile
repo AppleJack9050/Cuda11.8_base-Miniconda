@@ -14,8 +14,6 @@ RUN apt-get update && \
 ENV CONDA_DIR=/opt/conda
 ENV PATH=$CONDA_DIR/bin:$PATH
 
-ENV PIP=/opt/conda/bin/pip
-
 RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     mkdir -p $CONDA_DIR && \
     bash Miniconda3-latest-Linux-x86_64.sh -b -f -p $CONDA_DIR && \
